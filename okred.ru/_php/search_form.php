@@ -39,7 +39,7 @@
 			<tr>
 				<td class="maxsearch-holder-logo-td">
 					<div class="maxsearch-holder-logo">
-						<a href="/" class="logo <?php echo SEARCH_FORM_LOGO_TYPE ?>"></a>
+						<a href="#" class="logo <?php echo SEARCH_FORM_LOGO_TYPE ?>"></a>
 					</div>
 				</td>
 				<td class="maxsearch-holder-td">

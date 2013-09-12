@@ -65,7 +65,7 @@
 				<li id="auth">авторизация</li> -->
 			</menu>
 		</header>
-		<div id="content_page">
+     <!-- <div id="content_page">
 			<div class="search">
 				<input type="text" placeholder="Введите запрос">
 				<div class="select_search" onclick="load_params($(this))">
@@ -89,7 +89,7 @@
 					<li>Добавить трэк</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 		<footer>
 		</footer>
 		<div id="dialog-message"></div>
