@@ -1,0 +1,11 @@
+RewriteEngine On
+Options +FollowSymlinks
+
+RewriteRule ^([0-9]+)_([A-Za-z0-9-]+)_online-game.html$  index.php?game=$1
+RewriteRule ^([0-9]+)_([0-9]+)_navi.html$  index.php?cat=$1&start=$2
+RewriteRule ^([0-9]+).html$  index.php?cat=$1
+
+RewriteRule ^new_game.html$  index.php?top=new_game
+RewriteRule ^top_game.html$  index.php?top=top_game
+
+RewriteRule ^.htaccess$ - [F]

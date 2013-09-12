@@ -1,0 +1,161 @@
+header{
+    display: inline-block;
+    width: 100%;
+    background-color: #d4303b;
+    height: 40px;
+}
+
+menu{
+    margin: auto;
+    position: relative;
+    max-width: 1400px;
+    height: 100%;
+}
+
+menu li{
+    float: left;
+    list-style-type: none;
+    margin: 0px;
+    background-image: url(http://okred.ru/_images/topbar-icons-sprite.png);
+    background-repeat: no-repeat;
+    height: 30px;
+    padding: 10px 30px 0px 35px;
+    color: #fee5e7;
+    font-size: 13px;
+    font-family: Arial, Helvetica, UnDutom, Nimbus Sans L;
+    cursor:pointer;
+}
+
+menu li a{
+    color: #fee5e7;
+    text-decoration: none;
+}
+
+menu li#maps{
+    background-position: 0px -40px;
+}
+
+menu li#music{
+    background-position: 0px -80px;
+}
+
+menu li#video{
+    background-position: 0px -120px;
+}
+
+menu li#games{
+    background-position: 0px -160px;
+}
+
+menu li#job{
+    background-position: 0px -200px;
+}
+
+menu li#auto{
+    background-position: 0px -240px;
+}
+
+menu li#mail{
+    background-position: 0px -280px;
+}
+
+menu li#auth{
+    background-position: 0px -320px;
+    float: right;
+}
+
+menu li:hover{
+    background-color: #dd5962;
+}
+
+menu li.active{
+    background-color: #ad2831;
+}
+
+#content_page{
+    width: 100%;
+    height: 100%;
+}
+
+.search{
+    max-width: 1400px;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px #F90 solid;
+}
+
+.search input{
+    width: 88%;
+    height: 35px;
+}
+
+.select_search{
+    width: 11%;
+    height: 37px;
+    display: inline-table;
+    color: #EBEBEB;
+    cursor: pointer;
+    border-left: 1px #F0F0F0 solid;
+    padding-left: 8px;
+}
+
+.select_search:hover{
+    color: #DBDBDB;
+}
+
+.select_search.active{
+    border: 1px #F90 solid;
+    color: #E60000;
+    background: #e2e2e2;
+    background: -moz-linear-gradient(top, #FFFFFF 0%,#F0F0F0 50%,#F0F0F0 51%,#E0E0E0 100%);
+    background: -webkit-linear-gradient(top, #FFFFFF 0%,#F0F0F0 50%,#F0F0F0 51%,#E0E0E0 100%);
+    background: -o-linear-gradient(top, #FFFFFF 0%,#F0F0F0 50%,#F0F0F0 51%,#E0E0E0 100%);
+    background: -ms-linear-gradient(top, #FFFFFF 0%,#F0F0F0 50%,#F0F0F0 51%,#E0E0E0 100%);
+    background: linear-gradient(top, #FFFFFF 0%,#F0F0F0 50%,#F0F0F0 51%,#E0E0E0 100%);
+}
+
+.select_search p{
+    font-style: italic;
+    margin: 10px 0px;
+}
+
+.select_search .selected::after{
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 17px;
+}
+
+.select_search.active .list_param_search p{
+    color: #F90;
+}
+
+.select_search.active .list_param_search p:hover{
+    color: #E60000;
+}
+
+.list_param_search{
+    display: none;
+    width: 100%;
+}
+
+.list_param_search .selected{
+    display: none;
+}
+
+.content{
+    position: absolute;
+}
+
+.filtr{
+    position: absolute;
+    right: 0px;
+}
+
+.filtr ul{
+
+}
+
+.filtr ul li{
+    
+}

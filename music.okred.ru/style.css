@@ -1,0 +1,390 @@
+/*
+jPlay: A useful, practical and sexy Jamendo player
+Copyright (C) 2012 - Thomas Baquet < me lordblackfox net >
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+body {
+  font-size: 10pt;
+  padding-top: 30px;
+  margin-top: 0px;
+}
+
+
+a {
+  text-decoration: none;
+  color: orange;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #ffdd00;
+}
+
+
+.fasthelp {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  padding: 3px;
+
+  background-color: #000;
+  display: none;
+
+  color: grey;
+  font-style: italic;
+  font-size: 10pt;
+}
+
+a:hover > .fasthelp, div:hover > .fasthelp, span:hover > .fasthelp {
+  display: block;
+}
+
+
+div:not(.playlistitem)[dragover] {
+  outline: 3px orange dotted;
+  background-color: rgba(255, 190, 0, 0.2);
+}
+
+/*  Classes
+ */
+.scrollable {
+  overflow: auto;
+  height: 100%;
+}
+
+
+.listitem {
+  display: block;
+  color: #f08c84;
+  border-bottom: 1px orange solid;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.listitem:hover {
+  background-color: #222;
+}
+
+/*  Tabs
+ */
+#notebook {
+  width: 100%;
+}
+#notebook-tabs {
+  margin-bottom: 5px;
+  margin-top: -25px;
+  color: orange;
+}
+
+#notebook-tabs > a {
+  display: inline;
+  cursor: pointer;
+  font-size: 10pt;
+  background-color: #222;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#notebook-tabs > a[active], #notebook-tabs > a:hover {
+  background-color: #444;
+  border-top: 2px orange solid;
+  color: orange;
+}
+
+#tab-configure {
+  margin-left: 15px;
+}
+
+.input-box {
+  display: inline;
+
+  border: 1px black solid;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 0px;
+  margin-right: 5px;
+
+  background-color: #444;
+  color: orange;
+}
+
+.input-box input {
+  border: none;
+  background: none;
+  color: orange;
+}
+
+.input-box a {
+  font-size: 12pt;
+}
+
+
+/*  Sections
+ */
+section {
+  width: 69%;
+  height: 100%;
+  display: none;
+}
+
+section[active] {
+  display: block;
+}
+
+section h1 {
+  font-size: 12pt;
+  font-weight: bold;
+  color: orange;
+  margin: 0px;
+}
+
+section > h1 {
+  border-bottom: 1px orange solid;
+  margin: 5px;
+}
+
+/*  Configuration panel
+ */
+#configure {
+  background-color: #444;
+  color: orange;
+}
+
+#configure > div {
+  padding: 10px;
+}
+
+
+/*  Browser panel
+ */
+
+/*  Player */
+#sidebar {
+  width: 70%;
+  max-height: 100%;
+}
+
+#albums-container {
+  float: right;
+  width: 50%;
+}
+
+#album {
+  float: left;
+  width: 50%;
+}
+
+
+/* albums */
+#albums {
+  margin-bottom: 100px;
+}
+
+
+/*  album */
+#album-header {
+  min-height: 56px;
+  background-color: #222;
+  border-bottom: 1px solid black;
+}
+
+#album-header img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+}
+
+#album-header .info {
+  font-style: italic;
+  font-size: 8pt;
+  color: #111;
+}
+
+#album-header .info a { color: #444; }
+#album-header .info a:hover { color: #888; }
+
+#album-cartouche {
+  float: right;
+  vertical-align: middle;
+
+  font-size: 14pt;
+  color: orange;
+}
+
+#album-header:not([album]) #album-cartouche {
+  opacity: 0.3;
+}
+
+#album-cartouche a {
+  border-left: 1px orange solid;
+  border-bottom: 1px orange solid;
+  border-bottom-left-radius: 10px;
+  background-color: #222;
+
+  padding-left: 7px;
+  margin-left: -10px;
+  min-width: 30px;
+  min-height: 26px;
+
+  cursor: pointer;
+  display:block;
+  float: left;
+}
+
+
+#album-cartouche a:last-child {
+  min-width: 15px;
+}
+
+#album-cartouche a:hover {
+  background-color: #444;
+}
+
+
+.trackitem[active] {
+  font-style: italic;
+  color: orange;
+}
+
+.trackitem .append {
+  float: right;
+  color: orange;
+  margin-left: 10px;
+  font-size: 12pt;
+}
+
+.trackitem *[inherits*='duration'] {
+  width: 45px;
+  display: block;
+  float: left;
+}
+
+.albumpreview {
+  float: left;
+  padding: 3px;
+  margin: 3px;
+}
+
+.albumpreview img {
+  width: 40px;
+  height: 40px;
+}
+
+#album-siblings {
+  overflow: hidden;
+  background-color: #111;
+  box-shadow: inset 0px 0px 10px black;
+}
+
+/* sidebar */
+#track { margin-left: 20px; }
+#track audio { width: 100%; }
+
+#track span[inherits*="name"] { color: #fff; }
+#track span[inherits*="artist"] { font-size: 8pt; }
+
+#playlist-options {
+  float: right;
+}
+
+#playlist {
+  padding-bottom:40px;
+  overflow: auto;
+  height: 87%;
+  padding-top: 1px;
+}
+
+#playlist[dragover] { margin-left: 20px; }
+#playlist[dragover] > .playlistitem { margin-left: -20px; }
+.playlistitem[dragover] { padding-top: 30px; }
+
+
+.playlistitem[active] .sub,
+.playlistitem:hover .sub {
+  background: #444;
+}
+
+.playlistitem[active] .sub {
+  font-style: italic;
+  color: orange;
+}
+
+.playlistitem:hover .actions,
+.playlistitem .actions:hover {
+  display: block;
+}
+
+.playlistitem .actions {
+  display: none;
+  background-color: #222;
+
+  border: 1px orange solid;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  float: left;
+  margin-left: 3px;
+  margin-top: -1px;
+  width: 10px;
+  padding: 3px;
+
+  text-align: right;
+}
+
+
+.playlistitem > .sub {
+  background-color: #222;
+  margin-left: 20px;
+}
+
+.playlistitem .sub .sub {
+  font-size: 8pt;
+  color: grey;
+}
+
+.playlistitem .sub .sub span {
+  font-style: italic;
+}
+
+/*  albumitems
+ */
+.albumitem  {
+  padding: 3px;
+  overflow: hidden;
+}
+
+.albumitem *[inherits*='image'] {
+  float: left;
+  margin: 3px;
+  width: 25px;
+  height: 25px;
+}
+
+.albumitem[noartist] .artist {
+  display: none;
+}
+
+
+.albumitem .artist {
+  font-weight: bold;
+}
+
+.albumitem .tags {
+  font-size: 8pt;
+  font-style: italic;
+}

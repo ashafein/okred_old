@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>OKred - Новая поисковая система</title>
+
+<link href="_css/reset.css" rel="stylesheet" type="text/css" />
+<link href="_css/base.css" rel="stylesheet" type="text/css" />
+<link href="_css/layout.css" rel="stylesheet" type="text/css" />
+<link href="_css/menu.css" rel="stylesheet" type="text/css" />
+<link href="_css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="_css/jquery.mcustomscrollbar.css" rel="stylesheet" type="text/css" />
+<link href="_css/tipsy.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<script src="_js/jquery-1.8.3.js"></script>
+<script src="_js/jquery-ui.js"></script>
+<script src="_js/jquery.mousewheel.min.js"></script>
+<script src="_js/jquery.mсustomscrollbar.min.js"></script>
+<script src="_js/inputs-labels.js"></script>
+<script src="_js/search-input.js"></script>
+<script src="_js/tipsy.js"></script>
+<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.4"></script>
+	
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+		$.fn.tipsy.defaults = {
+    		delayIn: 0,      // delay before showing tooltip (ms)
+   			delayOut: 100,     // delay before hiding tooltip (ms)
+    		fade: true,     // fade tooltips in/out?
+    		fallback: '',    // fallback text to use when no tooltip text
+   			gravity: 'w',    // gravity
+   			html: false,     // is tooltip content HTML?
+    		live: false,     // use live event support?
+    		offset: 2,       // pixel offset of tooltip from element
+    		opacity: 1,    // opacity of tooltip
+    		title: 'title',  // attribute/callback containing tooltip text
+    		trigger: 'hover' // how tooltip is triggered - hover | focus | manual
+		};
+		$( ".ztooltip-w").tipsy({gravity: 'w',fade: true});
+		$( ".ztooltip-e").tipsy({gravity: 'e',fade: true});
+		$( ".ztooltip-n").tipsy({gravity: 'n',fade: true});
+		$( ".ztooltip-s").tipsy({gravity: 's',fade: true});
+	});	
+	$(".maxexpand-a").fancybox({
+				padding: 20,
+				openEffect : 'elastic',
+				openSpeed  : 300,	
+				openOpacity : true,
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+				closeClick : true,
+				helpers : {
+					overlay : {
+						css : {
+							'background' : 'rgba(0,0,0,0.46)'
+						}
+					}
+				}
+			});
+</script>
+
+<script>
+	(function($){
+			$(window).load(function(){
+				$(".widget-text-content").mCustomScrollbar({
+					set_width:true, 
+					set_height:false, 
+					horizontalScroll:false, 
+					scrollInertia:550, 
+					scrollEasing:"easeOutCirc", 
+					mouseWheel:"auto", 
+					autoDraggerLength:false, 
+					scrollButtons:{ 
+					enable:true, 
+					scrollType:"continuous", 
+					scrollSpeed:20, 
+					scrollAmount:40 
+					},
+					advanced:{
+						updateOnBrowserResize:true, 
+						updateOnContentResize:true, 
+						autoExpandHorizontalScroll:false, 
+						autoScrollOnFocus:true 
+					},
+					callbacks:{
+						onScrollStart:function(){}, 
+						onScroll:function(){}, 
+						onTotalScroll:function(){}, 
+						onTotalScrollBack:function(){}, 
+						onTotalScrollOffset:0, 
+						whileScrolling:false, 
+						whileScrollingInterval:30 
+					}
+				});
+				//demo fn
+				$("a[rel='show-content']").click(function(e){
+					e.preventDefault();
+					$(".widget-text-content").mCustomScrollbar("update");
+				});
+				$("#").click(function(e){
+					e.preventDefault();
+					$(".widget-text-content").mCustomScrollbar("update");
+				});
+			});
+		})(jQuery);
+</script>
+
+
+
+</head>
+
+<body>
+
+<div class="top-menu">
+	<center>
+	<div class="top-menu-wrapper">
+    	<img class="top-menu-separator" src="images/top-menu-separator.png" />
+        <img class="top-menu-cogs" src="images/top-menu-cogs-icon.png" />
+        <a class="top-menu-settings maxexpand-a" href="#maxzoom">Настройки</a>
+    	<a class="top-menu-favorites" href="#">Сделать OKRED стартовой страницей</a>
+        <div class="top-menu-auth-block">
+        	<img class="top-menu-auth-separator" src="images/top-menu-separator.png" />
+            <a class="top-menu-auth-status" href="#">Вы не авторизованы</a>
+            <img class="top-menu-auth-usr-icon" src="images/top-menu-auth-usr-icon.png" />
+            <img class="top-menu-auth-separator" src="images/top-menu-separator.png" />
+        </div>
+    </div>
+	</center>
+</div>
+
+<center>
+	<div class="table-wrapper">
+    	<table class="table-frame">
+        	<tbody>
+            	<tr class="content-top-holder">
+                	<td class="a"><div class="content-top-blank"></div></td>
+                    <td class="m20"><div class="td-margin-20"></div></td>
+                    <td class="b">
+                    	<div class="max">
+                    		<h3>Анекдот</h3>
+                        	<div class="hr"></div>
+                        	<div class="widget-text-content">
+                        		<p>Двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+           						<p>Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+                        	</div>
+                        	<div class="readmore"><a href="#">Еще анекдоты</a></div>
+                   		</div>
+                    </td>
+                    <td class="m20"><div class="td-margin-20"></div></td>
+                    <td class="c" colspan="3">
+                    	<div class="max">
+                    		<div id="tabs">
+                        	<ul>
+								<li class="li-1">
+                            		<div class="tab-left-bg"></div>
+                                	<a class="tab-middle-bg" href="#tabs-1" rel="show-content">bash.im</a>
+                                	<div class="tab-right-bg"></div>
+                            	</li>
+                            	<li class="li-2">
+                            		<div class="tab-left-bg"></div>
+                            		<a class="tab-middle-bg" href="#tabs-2" rel="show-content">ithappens.ru</a>
+                            		<div class="tab-right-bg"></div>
+                            	</li>
+                            	<li class="li-3">
+                            		<div class="tab-left-bg"></div>
+                                	<a class="tab-middle-bg" href="#tabs-3" rel="show-content">zadolba.li</a>
+                                	<div class="tab-right-bg"></div>
+                            	</li>
+							</ul>
+							<div id="tabs-1">
+								<div class="widget-text-content">
+									<p>Принесли бук двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+           							<p>Двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+								</div>
+           						<div class="readmore"><a href="#">Еще цитаты</a></div>
+							</div>
+							<div id="tabs-2">
+        						<div class="widget-text-content">
+									<p>В октябре того года принесли бук двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+            						<p>В октябре того года принесли бук двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+								</div>
+            					<div class="readmore"><a href="#">Еще истории</a></div>
+							</div>
+							<div id="tabs-3">
+								<div class="widget-text-content">
+            						<p>Того года принесли бук двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+            						<p>Принесли бук двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+            						<p>Двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+            						<p>Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+								</div>
+            					<div class="readmore"><a href="#">Еще рассказы</a></div>
+								</div>
+                     		</div>  
+                    	</div>
+                	</td>
+        		</tr>
+                <tr class="searchbox-holder">
+                	<td class="a" colspan="8">
+                    	<form>
+                    	<table class="searchbox-container">
+                        	<tbody>
+                            	<tr class="searchbox-menu">
+                                	<td class="a" colspan="7"><div class="searchbox-menu-a">
+                                    	<ul class="maxsearchmenu">
+											<li class="m1 current">
+                                				<a href="#"><span>Поиск</span></a>
+                            				</li>
+                                            <li class="m2">
+                                				<a href="#"><span>Карты</span></a>
+                            				</li>
+                                            <li class="m3">
+                                				<a href="#"><span>Музыка</span></a>
+                            				</li>
+                                            <li class="m4">
+                                				<a href="#"><span>Картинки</span></a>
+                            				</li>
+                                            <li class="m5">
+                                				<a href="#"><span>Работа</span></a>
+                            				</li>
+                                            <li class="m6">
+                                				<a href="#"><span>Игры</span></a>
+                            				</li>
+                                        </ul>
+                                    </div></td>
+                                </tr>
+                            	<tr>
+                                	<td class="a"><div class="searchbox-a"><a href="/" title="Перейти на главную"><img id="logo" src="images/logo.png" /></a></div></td>
+                                	<td class="b"><div class="searchbox-b">
+                                    	<label for="maxsearch-input" id="maxsearch-label">Для чего бобру мощный хвост</label>
+                                    	<input id="maxsearch-input" class="b-form-input__input" maxlength="400" autocomplete="off" name="text" tabindex="1" autofocus type="text">
+                                    </div></td>
+                                	<td class="c"><div class="searchbox-c">
+                                    	<div class="ztooltip-e" id="maxsearch-clear" original-title="Очистить строку поиска"></div>
+                                        </div></td>
+                                	<td class="d"><div class="searchbox-d">
+                                    	<div id="searchbox-d-cogs"></div>
+                                        	<div id="searchbox-d-cogs-panel">
+                                            	<div id="searchbox-d-cogs-panel-arrow"></div>
+                                                <div id="searchbox-d-cogs-panel-close"></div>
+                                                <input id="searchbox-d-cogs-panel-focusholder" type="checkbox">
+                                            	<p>Искать по:</p>
+                                                <div id="yasearch-logo"></div>
+                                                <div id="gsearch-logo"></div>
+                                        	</div>
+                                    </div></td>
+                                	<td class="e"><div class="searchbox-e"><input class="maxsearch-ok b-form-button__input" type="submit" tabindex="20" value=""></div></td>
+                                	<td class="f"><div class="searchbox-f"></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </td>
+        		</tr>
+                <tr class="content-holder">
+                	<td class="a">
+                    	<div class="max">
+                        	<div class="mail-widget">
+                            	<img id="mailbox-widget-mail-icon" src="images/mailbox-widget-mail-icon.png" /><h3>Почта</h3>
+                                <div class="clear"></div>
+                                	<form>
+                                    	<div class="mailbox-widget-login-input">
+                                        	<label for="b-domik-username" class="label-hide">Логин</label>
+                                            <input type="text" id="b-domik-username" class="label-over" />
+                                        </div>
+                                        <div class="mailbox-widget-password-input">
+                                        	<div id="mailbox-widget-ok-button"></div>
+                                            <label for="b-domik-password" class="label-hide">Пароль</label>
+                                            <input type="password" id="b-domik-password" class="label-over" />	
+                                        </div>
+                                        <div class="mailbox-widget-rememberme-input">
+                                        	<a href="" class="ztooltip-w" original-title="Вам не придется вводить логин и пароль каждый раз"></a>
+                                            <input type="checkbox" checked="" value="yes" name="twoweeks" class="zcheck" id="b-domik-permanent">
+                                            <label for="b-domik-permanent"><div id="zcheckbox"></div><div class="zcheck-label">запомнить меня</div></label>
+                                        </div>
+                                        <div class="mailbox-widget-register-forget">
+                                        	<a id="zforgotpwd" href="#" class="ztooltip-w" original-title="Пройдите несколько простых шагов, чтобы восстановить пароль">Забыли пароль?</a>
+                                            <a id="zregister" href="#" class="ztooltip-n" original-title="Регистрация займет всего минуту">Регистрация</a>
+                                        </div>
+                                        <div class="mailbox-widget-signinwith">
+                                        <p>Войти при помощи:</p>
+                                        	<a id="signinwith-help" class="ztooltip-w" original-title="Вы можете авторизоваться при помощи Вашей учетной записи на другом сайте" href="#"></a>
+                                        	<a id="signin-vkontakte" class="ztooltip-s" original-title="ВКонтакте" href="#"></a>
+                                            <a id="signin-facebook" class="ztooltip-s" original-title="Facebook" href="#"></a>
+                                            <a id="signin-twitter" class="ztooltip-s" original-title="Twitter" href="#"></a>
+                                            <a id="signin-mailru" class="ztooltip-s" original-title="Mail.ru" href="#"></a>
+                                            <a id="signin-google" class="ztooltip-s" original-title="Google" href="#"></a>
+                                            <a id="signin-odnoklassniki" class="ztooltip-s" original-title="Одноклассники" href="#"></a>                               
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                        
+                        <div class="max">
+                        	<div class="widget-fotki">
+                    		<h3>Фотки</h3>
+                        	<div class="hr"></div>
+                        		<img src="images/foto_img.png" />
+                        	<div class="readmore"><a href="#">Все фотографии</a></div>
+                            </div>
+                   		</div>
+                        
+                        <div class="max">
+                        	<div class="widget-video">
+                    		<h3>Видео</h3>
+                        	<div class="hr"></div>
+                        		<img src="images/video_img.png" />
+                        	<div class="readmore"><a href="#">Все видеозаписи</a></div>
+                            </div>
+                   		</div>
+                        
+                    </td>
+                    <td class="m20"><div class="td-margin-20"></div></td>
+                    <td class="b">
+                    	<div class="max">
+                    		<h3>Новости</h3>
+                        	<div class="hr"></div>
+                        	<div class="widget-text-content">
+                        		<p>По факту взрыва на шахте "Воркутинская" в Коми, повлекшего гибель людей, проводится доследственная проверка, сообщили "Интерфаксу" в СК РФ. "По данному факту проводится проверка, на место происшествия выехала следственная группа", - сказали в СК.</p>
+           						<p>В Москве при получении незаконного денежного вознаграждения в размере 29 млн руб. задержан заместитель директора Федерального государственного учреждения "Московский научно-исследовательский онкологический институт имени П. А. Герцена" Сергей Безяев, сообщает пресс-служба Главного управления экономической безопасности и противодействия коррупции ( ГУЭБиПК ) МВД России.</p>
+                        	</div>
+                        	<div class="readmore"><a href="#">Еще новости</a></div>
+                   		</div>
+                    </td>
+                    <td class="m20"><div class="td-margin-20"></div></td>
+                    <td class="c">
+                    	<div class="max">
+                    		<h3>Новости</h3>
+                        	<div class="hr"></div>
+                        	<div class="widget-text-content">
+                        		<p>Двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+           						<p>Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+                        	</div>
+                        	<div class="readmore"><a href="#">Еще новости</a></div>
+                   		</div>
+                    </td>
+                    <td class="m20"><div class="td-margin-20"></div></td>
+                    <td class="d">
+                    	<div class="max">
+                    		<h3>Новости</h3>
+                        	<div class="hr"></div>
+                        	<div class="widget-text-content">
+                        		<p>Двухбуквенной фирмы на замену шлейфа. Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+           						<p>Руки не доходили до него, и девушка, которая работает вместе со мной, заявила: «Может, назад вернём, раз у тебя ничего не получается?» С этого момента что-то пошло не так. Сначала прислали не тот шлейф из интернет-магазина, потом процедура обмена затянулась на полтора месяца. В итоге бук с чистой совестью я смог вручить владельцу ближе к Новому году.</p>
+                        	</div>
+                        	<div class="readmore"><a href="#">Еще новости</a></div>
+                   		</div>
+                    </td>
+        		</tr>
+        	</tbody>
+        </table>
+    </div>
+</center>
+
+<div class="footer">
+	<center>
+	<div class="footer-wrapper">
+    	<div class="footer-top">
+            	<a class="fmenu left" id="first" href="#">Поиск</a>
+                <a class="fmenu left" href="#">Карты</a>
+                <a class="fmenu left" href="#">Картинки</a>
+                <a class="fmenu left" href="#">Музыка</a>
+                <a class="fmenu left" href="#">Игры</a>
+                <a class="fmenu left" href="#">Видео</a>
+                <a class="fmenu left" id="last" href="#">Фотки</a>
+                
+                <a class="fmenu right" id="first" href="#"><img src="images/fmenu-icon-contacts.png" />Контакты</a>
+                <a class="fmenu right" href="#"><img src="images/fmenu-icon-help.png" />Помощь</a>
+                <a class="fmenu right"id="last" href="#"><img src="images/fmenu-icon-partners.png" />Партнерам</a>
+        </div>
+        <div class="clear"></div>
+        <div class="footer-middle">
+            	<a class="fmenu left" id="onlyone" href="#">Сделать стартовой</a>
+                
+                <a class="fmenu right" id="onlyone" href="#">Лицензионное соглашение</a>
+        </div>
+        <div class="clear"></div>
+        <div class="footer-bottom">
+            	<a class="fmenuicon ztooltip-s" id="fmenu-icon-facebook" href="#" original-title="Рассказать о нас в Facebook"></a>
+                <a class="fmenuicon ztooltip-s" id="fmenu-icon-vkontakte" href="#" original-title="Рассказать о нас в ВКонтакте"></a>
+                <a class="fmenuicon ztooltip-s" id="fmenu-icon-linkedin" href="#" original-title="Рассказать о нас в LinkedIn"></a>
+                <a class="fmenuicon ztooltip-s" id="fmenu-icon-twitter" href="#" original-title="Рассказать о нас в Twitter"></a>
+                <a class="fmenuicon ztooltip-s" id="fmenu-icon-google" href="#" original-title="Рассказать о нас в Google+"></a>
+                <p class="fmenu-p right" id="onlyone" href="#">© 2010 - 2013 «OKRED»</p>
+                <a class="fmenu center" href="#">Мобильная версия</a>
+        </div>
+    </div>
+	</center>
+</div>
+
+<div id="maxzoom" style="width:400px;display: none; overflow:hidden;">
+		<h3>Etiam quis mi eu elit</h3>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus. Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, vehicula non pretium varius, cursus ac tortor. Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare, faucibus eu mi. Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
+		</p>
+</div>
+
+</body>
+</html>

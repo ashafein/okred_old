@@ -1,0 +1,129 @@
+AddDefaultCharset utf-8
+
+RewriteEngine On
+
+RewriteRule ^video/ - [L]
+RewriteCond %{HTTP_HOST} ^video\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/video%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^video\.okred\.ru$
+RewriteRule (.*) video/$1 [L,QSA]
+
+
+RewriteRule ^video/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.video\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/video%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.video\.okred\.ru$
+RewriteRule (.*) video/$1 [L,QSA]
+
+
+RewriteRule ^music/ - [L]
+RewriteCond %{HTTP_HOST} ^music\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/music%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^music\.okred\.ru$
+RewriteRule (.*) music/$1 [L,QSA]
+
+
+RewriteRule ^music/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.music\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/music%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.music\.okred\.ru$
+RewriteRule (.*) music/$1 [L,QSA]
+
+
+RewriteRule ^pochta/ - [L]
+RewriteCond %{HTTP_HOST} ^pochta\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/pochta%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^pochta\.okred\.ru$
+RewriteRule (.*) pochta/$1 [L,QSA]
+
+
+RewriteRule ^pochta/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.pochta\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/pochta%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.pochta\.okred\.ru$
+RewriteRule (.*) pochta/$1 [L,QSA]
+
+
+RewriteRule ^auto/ - [L]
+RewriteCond %{HTTP_HOST} ^auto\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/auto%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^auto\.okred\.ru$
+RewriteRule (.*) auto/$1 [L,QSA]
+
+
+RewriteRule ^auto/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.auto\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/auto%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.auto\.okred\.ru$
+RewriteRule (.*) auto/$1 [L,QSA]
+
+
+RewriteRule ^job/ - [L]
+RewriteCond %{HTTP_HOST} ^job\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/job%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^job\.okred\.ru$
+RewriteRule (.*) job/$1 [L,QSA]
+
+
+RewriteRule ^job/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.job\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/job%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.job\.okred\.ru$
+RewriteRule (.*) job/$1 [L,QSA]
+
+
+RewriteRule ^maps/ - [L]
+RewriteCond %{HTTP_HOST} ^maps\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/maps%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^maps\.okred\.ru$
+RewriteRule (.*) maps/$1 [L,QSA]
+
+
+RewriteRule ^maps/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.maps\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/maps%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.maps\.okred\.ru$
+RewriteRule (.*) maps/$1 [L,QSA]
+
+
+RewriteRule ^games/ - [L]
+RewriteCond %{HTTP_HOST} ^games\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/games%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^games\.okred\.ru$
+RewriteRule (.*) games/$1 [L,QSA]
+
+
+RewriteRule ^games/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.games\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/games%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.games\.okred\.ru$
+RewriteRule (.*) games/$1 [L,QSA]
+
+RewriteRule ^joke/ - [L]
+RewriteCond %{HTTP_HOST} ^joke\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/joke%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^joke\.okred\.ru$
+RewriteRule (.*) joke/$1 [L,QSA]
+
+
+RewriteRule ^joke/ - [L]
+RewriteCond %{HTTP_HOST} ^www\.joke\.okred\.ru$
+RewriteCond %{DOCUMENT_ROOT}/joke%{REQUEST_URI} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [R,L]
+RewriteCond %{HTTP_HOST} ^www\.joke\.okred\.ru$
+RewriteRule (.*) joke/$1 [L,QSA]

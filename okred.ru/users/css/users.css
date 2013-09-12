@@ -1,0 +1,19 @@
+.avatar
+{ 
+	float: left;
+}
+
+.avatar img
+{ 
+	padding: 3px;
+	border: 1px solid #ccc;
+
+	width: 100px;
+	height: 100px;
+}
+
+.profile .info
+{
+	float: left;
+	margin-left: 6px;
+}

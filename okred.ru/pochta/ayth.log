@@ -1,0 +1,11 @@
+/pochta/index.php 2146bf8b77017609ad5bf3fc3676f878
+$.cookie("auth", null);
+$.cookie("auth", "1", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_fio", null);
+$.cookie("auth_fio", "Алина Дикалова", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_nickname", null);
+$.cookie("auth_nickname", "Алина Дикалова", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_id", null);
+$.cookie("auth_id", "61", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_sid", null);
+$.cookie("auth_sid", "e70361f19694e3bf9fc9f2b7684d86cf", {expires: 2592000, path: "/", domain: ".okred.ru"});

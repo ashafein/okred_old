@@ -1,0 +1,11 @@
+/job/searchr.php ec8948d63f1373d2d105f1c8b1b45e98
+$.cookie("auth", null);
+$.cookie("auth", "1", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_fio", null);
+$.cookie("auth_fio", "Зарина Джериева", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_nickname", null);
+$.cookie("auth_nickname", "Zettera", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_id", null);
+$.cookie("auth_id", "67", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_sid", null);
+$.cookie("auth_sid", "c399fa34aba176170510cc83dee3c1f2", {expires: 2592000, path: "/", domain: ".okred.ru"});

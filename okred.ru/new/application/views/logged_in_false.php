@@ -1,0 +1,2 @@
+<h3>Войти при помощи:<a class="none" id="none" style="text-decoration: none; margin-top: -20px;padding-left: 2px;" onclick="javascript:$('#mail-widget').css({display: 'none'});">[x]</a></h3>
+{ulogin_get_html}

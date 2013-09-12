@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	/*background:url(../images/page_bg.jpg) left top repeat #f3f2f2;   */
+	min-width: 980px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+	color:#f08c84;
+	font-size: 16px;
+	line-height: 1.3;
+	font-weight:bold;
+	text-align:left;
+}
+
+p {
+	font-size: 12px;
+	color:#7d7b7b;
+	line-height: 1.3;
+}
+
+td {
+	vertical-align:top;
+}
+
+a {
+	color:#E46261;
+}
+
+a:hover {
+	color:#c30b09;
+}

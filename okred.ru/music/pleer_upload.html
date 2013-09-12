@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> 
+		<link href="http://okred.ru/_css/base.css" rel="stylesheet" type="text/css" />
+		<style>
+			body
+			{
+			overflow: hidden;
+			padding: 2px;
+			}
+			
+			input
+			{
+			margin: 2px;
+			width: 250px;
+			}
+			
+			.btn
+			{
+			margin-top: 23px;
+			}
+		</style>
+		<!--[if lt IE 9]>
+			<style type="text/css">
+			input
+			{
+			margin: 1px;
+			}
+			
+			.btn
+			{
+			margin-top: 20px;
+			}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+		<form id="upload_form" action="ajax/upload" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="MAX_FILE_SIZE" value="20971520">
+			<input name="file" type="file" class="file"><br/>
+			<input name="song" type="text" placeholder="введите название песни"><br/>
+			<input name="singer" type="text"  placeholder="введите имя исполнителя"><br/>
+			<input type="submit" class="btn" value="начать загрузку">
+		</form>
+	</body>
+</html>			

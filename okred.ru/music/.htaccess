@@ -1,0 +1,22 @@
+AddDefaultCharset utf-8
+
+php_value file_uploads On
+php_value upload_max_filesize 20971520
+php_value post_max_filesize 20971600
+php_value post_max_size 20971600
+
+RewriteEngine on
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^$ index.php [L]
+RewriteRule ^index.php$ index.php [L]
+RewriteRule ^client.php$ client.php [L]
+RewriteRule ^/$ index.php [L]
+RewriteRule ^.*?ajax/upload(.*)$ controllers/ajax/upload/index.php [QSA,L]
+RewriteRule ^.*?mp3/(.*)$ mp3/$1 [QSA,L]
+
+#RewriteCond %{HTTP_ACCEPT} !(.*image.*|.*css.*|.*javascript.*)
+RewriteCond %{REQUEST_URI} !\.(js|css|jpg|jpeg|png|gif|svg|swf|html|ico)$ [NC]
+
+RewriteRule ^(.*)$ client.php?dir=$1 [QSA,L]

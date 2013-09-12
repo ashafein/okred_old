@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OKRED - Новая поисковая система</title>
+    <link href="_css/base.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table class="wrapper" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr class="topbar-tr">
+        <td class="topbar" valign="top" align="center">
+			<div class="topbar-wrapper">
+				<div class="topbar-authblock">
+					<div class="topbar-authblock-inner-borders">
+					<?php if(empty($_COOKIE['auth'])){ ?>
+						<a class="topbar-authblock-link" href="#">Авторизация</a>
+					<?php }else{ ?>
+						<a class="topbar-authblock-link" href="#"><?php if(!empty($_COOKIE["auth_nickname"])) echo $_COOKIE['auth_nickname']; else echo $_COOKIE['auth_fio']; ?></a>
+					<?php } ?>
+					<?php if(empty($_COOKIE['auth'])){ ?>
+						<div id="mail-widget" class="mail-widget"  style="display: none;">
+						<?php include("auth.php"); ?>
+						</div>
+					<?php } ?>
+					</div>
+                 </div>
+             </div>
+             <ul class="topbar-icons">
+               <li><a class="toolbar-icon toolbar-icon-search" href="http://okred.ru">поиск</a></li>
+               <li><a class="toolbar-icon toolbar-icon-map" href="http://maps.okred.ru">карты</a></li>
+               <li><a class="toolbar-icon toolbar-icon-music" href="http://music.okred.ru">музыка</a></li>
+               <li><a class="toolbar-icon toolbar-icon-video" href="http://video.okred.ru">видео</a></li>
+               <li><a class="toolbar-icon toolbar-icon-games" href="http://games.okred.ru">игры</a></li>
+               <li><a class="toolbar-icon toolbar-icon-job toolbar-icon-active" href="http://job.okred.ru">работа</a></li>
+               <li><a class="toolbar-icon toolbar-icon-auto" href="http://auto.okred.ru">авто</a></li>
+               <li><a class="toolbar-icon toolbar-icon-mail" href="http://pochta.okred.ru">почта</a></li>
+             </ul>
+
+           </div>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+
+            <form action="/">
+                <table class="maxsearch" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td width="110"><a href="/" class="logo"></a></td>
+                        <td width="100%"><label for="maxsearch-input" id="maxsearch-label">Для чего бобру мощный хвост</label>
+                        <input id="maxsearch-input" class="b-form-input__input" maxlength="400" autocomplete="off" name="search" tabindex="1" autofocus type="text" value=""></td>
+                        <td width="150"><input class="maxsearch-ok b-form-button__input" type="submit" tabindex="2" value="поиск"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+
+        </td>
+    </tr>
+    <tr class="bottom-tr" valign="bottom">
+        <td class="bottombar" align="center">
+            <div class="bottombar-wrapper">
+                <div class="bottombar-rightblock">
+                    <ul class="bottombar-right-icons">
+                        <li><a class="bottombar-right-icon bottombar-right-icon-contacts" href="/">контакты</a></li>
+                        <li><a class="bottombar-right-icon bottombar-right-icon-help" href="/">помощь</a></li>
+                        <li><a class="bottombar-right-icon bottombar-right-icon-partners" href="/">партнерам</a></li>
+                    </ul>
+                </div>
+                <ul class="bottombar-icons">
+                    <li><a class="social-icon social-icon-facebook" href="/"></a></li>
+                    <li><a class="social-icon social-icon-vkontakte" href="/"></a></li>
+                    <li><a class="social-icon social-icon-linkedin" href="/"></a></li>
+                    <li><a class="social-icon social-icon-twitter" href="/"></a></li>
+                    <li><a class="social-icon social-icon-google" href="/"></a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

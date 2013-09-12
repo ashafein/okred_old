@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+
+.job-top {
+    position:relative;
+    width: auto;
+    height: 100px;
+    display: block;
+    margin: 0 26px 0 25px;
+}
+.job-top-banner {
+
+}
+.job-rabotodatelyam {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #c8c8c8;
+    height: 100px;
+    float: right;
+    width: 200px;
+
+}
+.job-rabotodatelyam h2 {
+    color: #aaa7a7;
+    font-size: 14px;
+    text-align: left;
+    margin: 15px 0 8px 15px;
+}
+
+.job-rabotodatelyam ul li {
+    text-align: left;
+    font-size: 12px;
+    list-style: none;
+    margin: 0 15px 3px 15px;
+    line-height: 25px;
+}
+
+.job-rabotodatelyam ul li a {
+    padding: 5px 0 10px 30px;
+}
+
+#job-rabotodatelyam1 {
+    background: url(/images/job/job-icon-top-add.png) 0 0 no-repeat;
+}
+
+#job-rabotodatelyam2 {
+    background: url(/images/job/job-icon-top-price.png) 0 0 no-repeat;
+}
+
+.job-content {
+    position:relative;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 26px 0 25px;
+}
+a.add-resume {
+    width: 200px;
+    height: 44px;
+    display: block;
+    background: url(/images/job/add-resume-icon.png) left top no-repeat;
+    cursor: pointer;
+    margin:0 0 20px 0;
+}
+a.add-resume:hover {
+    background-position: left bottom;
+}
+a.job-right-banner {
+    width: 200px;
+    height: 441px;
+    display: block;
+    background: url(/images/job/job-right-banner.png) left top no-repeat;
+    cursor: pointer;
+}
+.job-best {
+
+}
+.job-best h2 {
+    color: #aaa7a7;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+.job-best-list {
+    max-height: 500px;
+    overflow: auto;
+    margin: 0 20px 0 0;
+}
+.job-best-list li {
+    list-style: none;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.last-link {
+    float: right !important;
+    font-size: 12px;
+    margin: 20px 0 0 0;
+}
+.last-link-best {
+    float: right !important;
+    font-size: 12px;
+    margin: 0 50px 0 0;
+}
+.last-link-news {
+    float: right !important;
+    font-size: 12px;
+    margin: 0 50px 0 0;
+}
+.last-link-vac {
+    float: right !important;
+    font-size: 12px;
+    margin: 10px 40px 20px 0;
+}
+.job-news {
+    margin: 0 40px 0 0;
+}
+.job-news h2 {
+    color: #aaa7a7;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+.job-news a {
+    font-size: 12px;
+    text-align: left;
+    display: block;
+    float: left;
+    margin: 0 0 20px 0;
+    line-height: 16px;
+
+}
+.job-vac {
+    margin: 0 20px 0 0;
+}
+
+.job-vac h2 {
+    color: #aaa7a7;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+.job-vac-list-left {
+    float: left;
+    margin: 0 60px 0 0;
+}
+.job-vac-list-left li {
+    text-align: left;
+    font-size: 12px;
+    list-style: none;
+    display: block;
+    margin: 0 15px 10px 0;
+}
+.job-vac-list-right {
+    float: left;
+    margin: 0 20px 0 0;
+}
+.job-vac-list-right li {
+    text-align: left;
+    font-size: 12px;
+    list-style: none;
+    display: block;
+    margin: 0 15px 10px 0;
+}
+.job-sovety {
+    margin: 0 40px 0 0;
+}
+.job-sovety h2 {
+    color: #aaa7a7;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+.job-sovety p {
+    text-align: justify;
+    font-size: 11px;
+}
+.job-sovety p img {
+    float: left;
+    margin: 0 15px 10px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #c8c8c8;
+    width: 200px;
+}
+.job-issledovaniya {
+    margin: 0 40px 0 0;
+}
+.job-issledovaniya h2 {
+    color: #aaa7a7;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+.job-issledovaniya p {
+    text-align: justify;
+    font-size: 11px;
+}
+.job-issledovaniya p img {
+    float: left;
+    margin: 0 15px 10px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*border: 1px solid #c8c8c8;  */
+    width: 140px;
+}

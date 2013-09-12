@@ -1,0 +1,11 @@
+/client.php 0c576f35955b2ff7c0be4d2ece1536f8
+$.cookie("auth", null);
+$.cookie("auth", "1", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_fio", null);
+$.cookie("auth_fio", "Иван Иванов", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_nickname", null);
+$.cookie("auth_nickname", "bmore", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_id", null);
+$.cookie("auth_id", "59", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_sid", null);
+$.cookie("auth_sid", "df9426111775451c50d2eccc5cf1f792", {expires: 2592000, path: "/", domain: ".okred.ru"});

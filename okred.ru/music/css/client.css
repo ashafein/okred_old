@@ -1,0 +1,443 @@
+.wrapper tbody
+{
+        vertical-align: top;
+}
+
+
+.clearit:after, #content:after
+{
+        clear: both;
+}
+
+.table-block-container
+{
+        float: left; 
+        left: 50%;
+        position: relative;
+}
+
+.table-block
+{
+        float:left;
+        right: 50%;
+        position: relative;
+
+        margin: 10px 5px 20px 0px;
+}
+
+.grid 
+{
+        position: relative;
+        list-style: none;
+}
+
+.small-grid
+{
+        width: 494px;
+}
+
+.grid-items, .grid-items ul 
+{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+.grid-item 
+{
+        float: left;
+}
+
+.big-grid-item
+{
+        width: 155px;
+        height: 155px;
+        float: left;
+}
+
+.simple-grid-item
+{
+        width: 127px;
+        height: 127px;
+        float: left;
+}
+
+.small-grid-item
+{
+        width: 118px;
+        height: 118px;
+        float: left;
+}
+
+.grid-item 
+{
+        border-radius: 0;
+        margin: 2px;
+        border: 1px solid #FFBFBF;
+        border-left: 0;
+        background: #fff;
+}
+
+.grid-item.item-4,
+.grid-item.item-5,
+.grid-item.item-6
+{
+        border-top-width: 0;
+}
+
+
+.grid-item .grid-item-label
+{
+        margin: 0;
+        color: inherit;
+        /*overflow: hidden;
+        text-overflow: ellipsis;
+        height: 13px;
+        width: inherit;*/
+}
+
+.grid-item .cover-image 
+{
+        background-position: top center;
+        border-radius: 0;
+}
+
+.grid-item .text-over-image-text
+{
+        background: #d12e39 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAAxJREFUGFdjuGJgDQADGwFAEKYDDwAAAABJRU5ErkJggg==);
+        -moz-opacity: 0.87;
+        -khtml-opacity: 0.87;
+        opacity: 0.87;
+}
+
+.grid-fill-link:focus + .text-over-image .grid-item-heading-link,
+.grid-fill-link:hover + .text-over-image .grid-item-heading-link
+{
+        text-decoration: underline;
+}
+
+.full-width-overlay 
+{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+}
+
+
+.grid a,
+.grid a:hover 
+{
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+}
+
+.grid a:hover 
+{
+        text-decoration: underline;
+}
+
+.grid h3, .grid p
+{
+        color: #FFF;
+        font-size: 12px;
+        line-height: 14px;
+}
+
+.cover-image
+{
+        background-size: cover;
+        background-position: center;
+        border-radius: 2px;
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+}
+
+.text-over-image
+{
+        position: absolute;
+        left: 0;
+
+        bottom: 0;
+}
+
+.text-over-image-text 
+{
+        background: #FFBFBF;
+        color: #fff;
+        padding: 3px 4px;
+        display: inline-block;
+}
+
+.text-over-image--block
+{
+        right: 0;
+}
+
+.text-over-image--block .text-over-image-text
+{
+        display: block;
+        padding: 2px 2px;
+}
+
+#loader
+{
+        border: 1px solid #f2f2f2;
+}
+
+
+
+/* =================== */
+
+.separator
+{
+        margin: 3px 0;
+        padding: 0;
+
+        width: 90%;
+
+        border-top: 1px solid #dae2e8;
+}
+
+.search
+{
+        width: 670px;
+        right: 50%;
+        position: relative;
+}
+
+.audio .search .logo
+{
+        display: block;
+}
+
+.playlist a:hover, .tabs a:hover, .playlist a, .tabs a
+{  
+        text-decoration: none;
+        color: #d4303b;
+}
+
+.playlist .selected a:hover, .tabs .selected a:hover, .playlist .selected a, .tabs .selected a
+{  
+        color: #fff;
+}
+
+.artists
+{
+        height: 125px;
+}
+
+.playlist
+{
+        width: 500px;
+        height: 100%;
+        border-right: 1px solid #dae2e8;
+        overflow: hidden;
+}
+
+.playlist .track, .tabs .tab
+{
+        position: relative;
+
+        margin: 0;
+        padding: 1px 0 1px 5px;
+
+        color: #d4303b;
+        font-size: 12px;
+
+        border-radius: 0;
+}
+
+.playlist .track
+{
+        height: 35px;
+        width: 480px;
+}
+
+.playlist .track:hover, .tabs .tab:hover, .tab-hover
+{
+        background: #F3EAEA;
+        *filter: alpha(opacity:90);
+        -moz-opacity: 0.90;
+        -khtml-opacity: 0.90;
+        opacity:0.90;
+        cursor: pointer;
+}
+
+
+.playlist .selected, .playlist .selected:hover, .tabs .selected, .tabs .selected:hover
+{
+        background: #d4303b;
+        color: #fff;
+}
+
+.playlist .deleted, .playlist .deleted:hover, .playlist .deleted + .tab-hover
+{
+        filter: alpha(opacity:40);
+        -moz-opacity: 0.40;
+        -khtml-opacity: 0.40;
+        opacity:0.40;
+}
+
+.playlist .track .play-btn 
+{ 
+        background: url("../img/playpause.gif") 0px 0px no-repeat transparent;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+}
+
+.playlist .track .stop-btn
+{ 
+        background: url("../img/playpause.gif") 0px -16px no-repeat transparent;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+}
+
+.playlist .right-btn
+{
+        position: absolute;
+        left: 93%;
+}
+
+.right-btn
+{
+        margin: 1px;
+        display: none;
+}
+
+.tab-hover .right-btn, .track:hover .right-btn, .tab:hover .right-btn
+{
+        display: block;
+}
+
+.right-btn:hover
+{
+        filter: alpha(opacity:70);
+        -moz-opacity: 0.70;
+        -khtml-opacity: 0.70;
+        opacity:0.70;
+}
+
+.delete-btn
+{
+        background: url("../img/audio_icons.png") -106px -50px no-repeat transparent;
+        height: 14px;
+        width: 14px;
+}
+
+.selected .delete-btn
+{
+        background: url("../img/audio_icons.png") -119px -50px no-repeat transparent;
+}
+
+.add-btn
+{
+        background: url("../img/audio_icons.png") -79px -50px no-repeat transparent;
+        height: 14px;
+        width: 14px;
+}
+
+.selected .add-btn
+{
+        background: url("../img/audio_icons.png") -92px -50px no-repeat transparent;
+}
+
+
+.ok-btn
+{
+        background: url("../img/audio_icons.png") -166px -49px no-repeat transparent;
+        height: 14px;
+        width: 14px;
+}
+
+.selected .ok-btn
+{
+        background: url("../img/audio_icons.png") -184px -49px no-repeat transparent;
+}
+
+.edit-btn
+{
+        background: url("../img/audio_icons.png") -135px -50px no-repeat transparent;
+        height: 14px;
+        width: 14px;
+}
+
+.selected .edit-btn
+{
+        background: url("../img/audio_icons.png") -149px -50px no-repeat transparent;
+}
+
+.playlist .track .play-btn, .playlist .track .stop-btn
+{
+        margin-right: 10px;
+}
+
+.playlist .track .info, .tabs .tab .info
+{
+        position: relative;
+
+        top: 50%;
+
+        height: 12px;
+
+        margin: -7px 3px 0px 5px;
+        padding: 0;
+}
+
+.playlist .track div, .tabs .tab div
+{
+        float: left;
+}
+
+.playlist .track .info
+{
+        width: 485px;
+}
+
+.playlist .track .info .artist
+{
+        text-align: left;
+        font-weight: bold;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        max-width: 190px;
+}
+
+.playlist .track .info .title , .tabs .tab  .info .title
+{
+        text-align: left;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        width: 250px;
+}
+
+.tabs
+{
+        width: 160px;
+}
+
+.tabs .tab
+{
+        width: 150px;
+        height: 25px;
+
+        margin-left: 5px;
+}
+
+.tabs .tab .info .title
+{
+        width: 110px;
+}

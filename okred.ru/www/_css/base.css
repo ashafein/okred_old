@@ -1,0 +1,301 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--------------BASE-STYLES.START--------------*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: Arial, Helvetica, serif;
+}
+a {
+    color: #1792cb;
+}
+a:hover {
+    color: #D4303B;
+}
+
+h2 {
+    color: #8a8a8a;
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.topbar {
+    height: 40px;
+    width: auto;
+    background: #d4303b;
+    display: block;
+}
+.topbar-tr {
+    height: 40px;
+}
+
+.bottombar {
+    height: 40px;
+    width: auto;
+    background: #d4303b;
+    display: block;
+}
+.bottom-tr {
+    height: 40px;
+}
+.topbar-wrapper {
+    min-width: 980px;
+    max-width: 1400px;
+}
+.bottombar-wrapper {
+    min-width: 980px;
+    max-width: 1400px;
+}
+.topbar-icons {
+    height: 40px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.topbar-icons li {
+    list-style: none;
+    float: left;
+    height: 40px;
+    width: auto;
+}
+.topbar-icons li a {
+    height: 30px;
+    width: auto;
+    display: block;
+    color: #fee5e7;
+    font-size: 13px;
+    padding: 10px 23px 5px 45px;
+    text-decoration: none;
+}
+.topbar-icons li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+.toolbar-icon {
+    height: 40px;
+    width: auto;
+    background: url(/_images/topbar-icons-sprite.png) no-repeat;
+}
+.toolbar-icon-active {
+    background-color: #ad2831;
+}
+.toolbar-icon-search {
+    background-position: 10px 0 !important;
+    padding-left: 45px !important;
+}
+.toolbar-icon-map {
+    background-position: 10px -40px !important;
+    padding-left: 44px !important;
+}
+.toolbar-icon-music {
+    background-position: 10px -80px !important;
+    padding-left: 46px !important;
+}
+.toolbar-icon-video {
+    background-position: 10px -120px !important;
+    padding-left: 46px !important;
+}
+.toolbar-icon-games {
+    background-position: 10px -160px !important;
+    padding-left: 52px !important;
+}
+.toolbar-icon-job {
+    background-position: 10px -200px !important;
+    padding-left: 48px !important;
+}
+.toolbar-icon-auto {
+    background-position: 10px -240px !important;
+    padding-left: 50px !important;
+}
+.toolbar-icon-mail {
+    background-position: 10px -280px !important;
+    padding-left: 49px !important;
+}
+.topbar-authblock {
+    border-left: 1px solid #e74d57;
+    border-right: 1px solid #bd2c36;
+    float: right;
+    width: auto;
+    height: 40px;
+    position: relative;
+}
+.topbar-authblock-inner-borders {
+    border-right: 1px solid #e74d57;
+    border-left: 1px solid #bd2c36;
+    height: 40px;
+    width: auto;
+}
+.topbar-authblock-link {
+    height: 30px;
+    width: auto;
+    display: block;
+    color: #fee5e7;
+    font-size: 13px;
+    padding: 11px 13px 5px 37px;
+    text-decoration: none;
+    background: url(/_images/topbar-icons-sprite.png) no-repeat;
+    background-position: 0 -320px !important;
+    margin-right: 1px;
+}
+.topbar-authblock-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.bottombar-icons {
+    height: 40px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.bottombar-icons li {
+    list-style: none;
+    float: left;
+    height: 40px;
+    width: auto;
+}
+.bottombar-icons li a {
+    height: 17px;
+    width: 17px;
+    display: block;
+    margin: 12px 6px 3px 0;
+    text-decoration: none;
+}
+.bottombar-icons li a:hover {
+    opacity: 0.6;
+}
+.social-icon {
+    height: 17px;
+    width: 17px;
+    background: url(/_images/bottombar-icons-sprite.png) no-repeat;
+}
+.social-icon-facebook {
+    background-position: 0 0;
+}
+.social-icon-vkontakte {
+    background-position: -17px 0;
+}
+.social-icon-linkedin {
+    background-position: -34px 0;
+}
+.social-icon-twitter {
+    background-position: -51px 0;
+}
+.social-icon-google {
+    background-position: -68px 0;
+}
+.bottombar-rightblock {
+    float: right;
+    width: auto;
+    height: 40px;
+    position: relative;
+}
+.bottombar-right-icons {
+    height: 40px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.bottombar-right-icons li {
+    list-style: none;
+    float: right;
+    height: 40px;
+    width: auto;
+}
+.bottombar-right-icons li a {
+    height: 30px;
+    width: auto;
+    display: block;
+    color: #fee5e7;
+    font-size: 13px;
+    padding: 10px 17px 5px 45px;
+    text-decoration: none;
+}
+.bottombar-right-icons li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+.bottombar-right-icon {
+    background: url(/_images/bottombar-right-icons-sprite.png) no-repeat;
+}
+.bottombar-right-icon-contacts {
+    background-position: 0 -80px;
+    padding-left: 40px !important;
+}
+.bottombar-right-icon-help {
+    background-position: 0 -40px;
+    padding-left: 40px !important;
+}
+.bottombar-right-icon-partners {
+    background-position: 0 0;
+    padding-left: 43px !important;
+}
+.maxsearch .logo {
+    width: 96px;
+    height: 40px;
+    cursor: pointer;
+    background: url(/_images/logo.png) 0 0 no-repeat;
+    display: block;
+}
+.maxsearch {
+    width:auto;
+    height:auto;
+    display:block;
+    margin:0 0 0 0;
+    min-width: 600px;
+    max-width: 1000px;
+    display: block;
+}
+.maxsearch #maxsearch-input {
+    width:100%;
+    height:38px;
+    border: 1px solid #c9c9c9;
+    text-indent:0;
+    padding:0 5px;
+    margin:0;
+    line-height:40px;
+    font-size:16px;
+    color:#646464;
+    z-index:1;
+    text-align: left;
+    cursor:text;
+}
+
+.maxsearch #maxsearch-label {
+    display: none;
+    width:100%;
+    height:38px;
+    border: none !important;
+    padding:0 0 0 5px;
+    margin:0;
+    line-height:40px;
+    font-size:16px;
+    color:#646464;
+    z-index:2;
+    text-align: left;
+    cursor:text;
+}
+.maxsearch .maxsearch-ok {
+    width: 90px;
+    height: 38px;
+    display: block;
+    margin: 0 0 0 8px;
+    padding: 0 3px 3px 25px;
+    border: none;
+    background: url(/_images/search-ok.png) 0 0 no-repeat;
+    font-size:13px;
+    color:#fdbfc4;
+    cursor: pointer;
+}
+.maxsearch .maxsearch-ok:hover {
+    background-position: 0 -38px;
+}
+

@@ -1,0 +1,45 @@
+
+			html, body, iframe 
+			{
+			min-width: 700px;
+			}
+			
+			*
+			{
+			margin: 0px;
+			padding: 0px;
+			border: #000 solid 0px;
+			outline: none;
+			}
+			
+			iframe
+			{
+			top: 0px;
+			left: 0px;
+			position: absolute;
+			overflow: auto;
+			margin-top: 100px;
+}
+			
+			#audio 
+			{
+			/*display: none;*/
+			position: fixed;
+			top: 115px;
+			right: 0;
+			z-index: 999999;
+			padding: 20px;
+			margin: -20px 0 0 0;
+			}
+			
+			#nezed, #swing
+			{  
+			display: none;
+			}
+			
+			.ok-btn
+			{
+			background: url("img/audio_icons.png") -166px -49px no-repeat transparent!important;
+			height: 14px;
+			width: 14px;
+			}

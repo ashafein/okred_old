@@ -1,0 +1,11 @@
+/games/index.php bc91093b511267e140e4a89f1e2f19c7
+$.cookie("auth", null);
+$.cookie("auth", "1", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_fio", null);
+$.cookie("auth_fio", "Sokolov Andrey", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_nickname", null);
+$.cookie("auth_nickname", "", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_id", null);
+$.cookie("auth_id", "56", {expires: 2592000, path: "/", domain: ".okred.ru"});
+$.cookie("auth_sid", null);
+$.cookie("auth_sid", "c7f6a79a0f6eb6c0ac4d67df3a314547", {expires: 2592000, path: "/", domain: ".okred.ru"});

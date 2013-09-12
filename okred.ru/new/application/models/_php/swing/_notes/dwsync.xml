@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="App.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130184625000000000" remote="130184625000000000" />
+<file name="BaseController.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130185087600000000" remote="130185087600000000" />
+<file name="BaseException.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130184627400000000" remote="130184627400000000" />
+<file name="CException.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130184580000000000" remote="130184580000000000" />
+<file name="Config.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="Controller.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130185088200000000" remote="130185088200000000" />
+<file name="Encoding.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="Errors.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="File.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="GoogleRequest.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130184502000000000" remote="130184502000000000" />
+<file name="Gy.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130184608200000000" remote="130184608200000000" />
+<file name="HttpException.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130184580000000000" remote="130184580000000000" />
+<file name="Import.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="Request.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="Response.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="SMysql.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+<file name="Utils.php" server="service-toshiba.myjino.ru//domains/okred.ru/" local="130186240200000000" remote="130186240200000000" />
+</dwsync>
