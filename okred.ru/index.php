@@ -14,10 +14,10 @@ Gy::app(array(
     'debugMode'=>true,
     'developerMode'=>array(
         'state'=>false,
-        /*'ipFilters'=>array(
+        'ipFilters'=>array(
             '188.168.92.125',
             '95.37.81.202',
-        ),*/
+        ),
     ),
     'charset'=>'utf-8',
     'templatesPath'=>BASEDIR. DS .'_php'. DS .'templates',

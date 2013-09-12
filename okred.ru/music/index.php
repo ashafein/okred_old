@@ -92,7 +92,7 @@
 		</div>
 		<footer>
 		</footer>
-		<!--div id="dialog-message"></div>
+		<div id="dialog-message"></div>
 		<a href="http://nezed.ru" id="nezed">NeZeD - Web site developer</a>
 		<a href="http://freelance.ru/users/swing1991" id="swing">SwInG - (PHP, JS, Flash) developer</a>
 		<div id="frame_box">
@@ -105,6 +105,6 @@
 	<script type="text/javascript">
 		var HOST = '<?php echo HOST; ?>';
 		var COMPONENT_HOST = 'http://okred.ru/music';
-	</script-->
+	</script
 </body>
 </html>
